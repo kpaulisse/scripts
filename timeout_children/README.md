@@ -42,6 +42,7 @@ timeout_children.rb killed pid=4763 ppid=4762 [] # This was the child
 ```
 $ ./timeout_children.rb -t 12 -c ./test/fork_and_die.pl
 Parent
+# Control is returned to the shell; wait 5 seconds
 Child
 ```
 
@@ -57,6 +58,7 @@ timeout_children.rb killed pid=4840 ppid=4839 [/usr/bin/perl ./test/fork_and_wai
 
 ```
 $ ./timeout_children.rb -t 17 -c ./test/fork_and_wait.pl
-Parent
 Child
+# Wait 5 seconds
+Parent
 ```
